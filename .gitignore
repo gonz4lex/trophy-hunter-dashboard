@@ -54,8 +54,3 @@ coverage.xml
 # Personal or local files
 NOTES.md
 test.ipynb
-
-# Compiled visualization artifacts (if any)
-*.png
-*.jpg
-*.svg
