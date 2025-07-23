@@ -1,0 +1,61 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+*.egg-info/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Streamlit config & logs
+.streamlit/config.toml
+.streamlit/*.log
+
+# Data cache
+data_cache/
+
+# System files
+.DS_Store
+Thumbs.db
+*.bak
+*.swp
+*.swo
+
+# IDE settings
+.vscode/
+
+# Log and temp files
+*.log
+*.tmp
+*.temp
+*.zone.identifier
+
+# Python packaging
+build/
+dist/
+*.egg
+*.manifest
+*.spec
+
+# Test output
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+
+# Personal or local files
+NOTES.md
+test.ipynb
+
+# Compiled visualization artifacts (if any)
+*.png
+*.jpg
+*.svg
