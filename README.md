@@ -1,8 +1,6 @@
 # Trophy Hunter Dashboard
 
-A Streamlit-powered dashboard for visualizing and analyzing PlayStation trophy data, scraped from [PSNProfiles](https://psnprofiles.com/). View your trophy milestones, rarest achievements, gaming streaks, and more—all in a beautiful, interactive UI.
-
-![Dashboard Screenshot](assets/ps-platinum.png)
+A Streamlit-powered dashboard for visualizing and analyzing PlayStation trophy data, scraped from [PSNProfiles](https://psnprofiles.com/). View your trophy milestones, rarest achievements, gaming streaks, and more in a beautiful, interactive UI.
 
 ---
 
