@@ -70,7 +70,7 @@ def parse_profile_summary(html_content: str) -> Dict[str, Any]:
                 label = stat.find("span").text.strip()
                 profile_summary["stats"][label] = value
     except (AttributeError, TypeError, ValueError) as e:
-        print(f"Error parsing summary: {e}")
+        logger.error(f"Error parsing summary: {e}")
         return {}  # Return an empty dict on failure
 
     return profile_summary
@@ -111,7 +111,7 @@ def parse_trophy_log_page(html_content: str) -> List[Dict[str, str]]:
             }
             trophy_data.append(trophy)
         except (AttributeError, TypeError, KeyError) as e:
-            print(f"Skipping a malformed row in trophy log: {e}")
+            logger.warning(f"Skipping a malformed row in trophy log: {e}")
             continue
 
     return trophy_data
@@ -128,7 +128,7 @@ def fetch_summary_data(
         summary_rs.raise_for_status()
         return parse_profile_summary(summary_rs.text)
     except requests.exceptions.RequestException as e:
-        print(f"Network error fetching summary: {e}")
+        logger.error(f"Network error fetching summary: {e}")
         raise
 
 
@@ -170,7 +170,7 @@ def fetch_full_trophy_log(
             time.sleep(SCRAPE_DELAY_SECONDS)
             
         except requests.exceptions.RequestException as e:
-            print(f"Network error on page {page}: {e}")
+            logger.error(f"Network error on page {page}: {e}")
             raise
 
     end_time = time.time()
