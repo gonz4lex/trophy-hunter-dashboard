@@ -9,6 +9,7 @@ from logging.handlers import RotatingFileHandler
 from typing import Callable, List, Dict, Any
 import time
 
+import os
 import json
 import random
 import requests
@@ -22,6 +23,8 @@ logger.setLevel(logging.INFO)
 
 if not logger.handlers:
     stream_handler = logging.StreamHandler()
+
+    os.makedirs("./logs", exist_ok=True)
     file_handler = RotatingFileHandler(
         "./logs/scraper.log", maxBytes=1024 * 1024, backupCount=3
     )
